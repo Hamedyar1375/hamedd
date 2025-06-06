@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.db.base import Base
 from app.db.session import engine
@@ -34,6 +35,15 @@ db_startup.close()
 
 
 app = FastAPI(title="Admin Panel Backend", version="0.1.0")
+
+# CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Mount routers
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
