@@ -8,3 +8,4 @@ passlib[bcrypt]
 requests # For Marzban API client
 cryptography # Already a sub-dependency of python-jose, but good to have explicitly for Fernet if not already listed
 pydantic-settings
+python-multipart
