@@ -1,4 +1,5 @@
-from pydantic import BaseSettings
+from typing import Optional
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     DATABASE_URL: str = "mysql+pymysql://user:password@host/db_name"
