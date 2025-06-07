@@ -1,0 +1,6 @@
+Simulating admin login call from frontend to http://localhost:8000/api/v1/auth/token...
+Login API Response (simulated from frontend):
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDkyMzc1NjQsInN1YiI6ImFkbWluIn0.WLT6jg_g7fJEcYU0a7YIbKoNN5yFInyA4r65pyat7NI","token_type":"bearer"}
+HTTP_STATUS_CODE:200
+--- Verification of Login API Call ---
+Admin login API call successful. access_token found.

@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted, defineProps, defineEmits } from 'vue';
+import { ref, watch, computed, defineProps, defineEmits } from 'vue'; // Removed onMounted as unused
 import { useAdminResellersStore } from '@/store/adminResellers';
 import { ElMessage } from 'element-plus';
 
@@ -99,7 +99,9 @@ const fetchRequiredData = async () => {
         }
 
       })
-      .catch(err => {
+      // Corrected to use _err or log it, for now just renaming param
+      .catch(_err => {
+        console.error("Error in fetchAccessPromise for ResellerPanelAccessDialog:", _err);
         // Error already set in store, but can be handled here too if needed
         selectedPanelIds.value = []; // Reset on error
       });

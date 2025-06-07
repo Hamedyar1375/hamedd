@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./marzban_reseller_panel/frontend
+      dockerfile: Dockerfile.backend
+    container_name: marzban_reseller_backend
+    restart: unless-stopped
+    volumes:
+      # Volume for SQLite database persistence
+      # The database file will be stored at /app/marzban_reseller_panel.db within the container
+      # as per config.py (./marzban_reseller_panel.db relative to WORKDIR /app)
+      # and this volume maps the container's /app directory.
+      - backend_data:/app
+    environment:
+      # Ensure DATABASE_URL points to the file within the mounted volume /app
+      # The backend's config.py uses "sqlite:///./marzban_reseller_panel.db".
+      # If WORKDIR is /app, this resolves to /app/marzban_reseller_panel.db.
+      # This matches the volume mount.
+      DATABASE_URL: "sqlite:///marzban_reseller_panel.db" # Path relative to WORKDIR /app
+      # SECRET_KEY should be set for production, e.g., from .env file or direct value
+      SECRET_KEY: "your_very_secret_key_for_docker_compose"
+      # ALGORITHM: "HS256" # Already defaulted in config.py
+      # ACCESS_TOKEN_EXPIRE_MINUTES: 30 # Already defaulted in config.py
+      # MARZBAN_PANEL_FERNET_KEY: "your_fernet_key" # Should be consistent if pre-generated
+      # CORS_ORIGINS: "http://localhost,http://localhost:80,http://yourfrontenddomain.com"
+    # The backend port is not exposed directly to the host by default,
+    # as Nginx in the frontend container will proxy requests to it.
+    # It needs to be accessible on the Docker network for the frontend service.
+    expose:
+      - "8000"
+    networks:
+      - marzban_app_network
+
+  frontend:
+    build:
+      context: ./marzban_reseller_panel/frontend
+      dockerfile: Dockerfile.frontend
+      args:
+        # VUE_APP_API_BASE_URL is set to /api/v1/ so that Nginx within this container
+        # can catch requests to /api/v1/ and proxy them to the backend service.
+        VUE_APP_API_BASE_URL: /api/v1/
+    container_name: marzban_reseller_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80" # Map host port 80 to Nginx container port 80
+    depends_on:
+      - backend
+    networks:
+      - marzban_app_network
+
+volumes:
+  backend_data: # Persists SQLite database and potentially other data in /app of backend
+
+networks:
+  marzban_app_network:
+    driver: bridge

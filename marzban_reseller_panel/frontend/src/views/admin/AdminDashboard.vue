@@ -91,13 +91,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed, defineAsyncComponent } from 'vue';
+import { ref, onMounted, computed, defineAsyncComponent, watch } from 'vue'; // Added watch
 import { useRouter } from 'vue-router';
 import { useAdminAuthStore } from '@/store/adminAuth';
 import { useAdminReportsStore } from '@/store/adminReports';
 import { useAdminResellersStore } from '@/store/adminResellers'; // For KPI
 import { useAdminMarzbanPanelsStore } from '@/store/adminMarzbanPanels'; // For KPI
-import { useAdminPaymentReceiptsStore } from '@/store/adminPaymentReceipts'; // For KPI
+// import { useAdminPaymentReceiptsStore } from '@/store/adminPaymentReceipts'; // Removed as unused
 
 
 const LineChart = defineAsyncComponent(() => import('@/components/charts/LineChart.vue'));
@@ -110,7 +110,7 @@ const reportsStore = useAdminReportsStore();
 // For now, using store data where available, otherwise placeholders
 const resellersStore = useAdminResellersStore();
 const marzbanPanelsStore = useAdminMarzbanPanelsStore();
-const paymentReceiptsStore = useAdminPaymentReceiptsStore();
+// const paymentReceiptsStore = useAdminPaymentReceiptsStore(); // Removed as unused
 
 const totalResellers = ref(0); // Placeholder, or fetch from resellersStore.getResellers.length
 const activePanels = ref(0);   // Placeholder, or fetch from marzbanPanelsStore.getPanels.length

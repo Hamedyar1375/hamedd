@@ -152,7 +152,7 @@ watch(selectedResellerId, (newResellerId) => {
   }
 });
 
-const handleResellerSelected = (resellerId) => {
+const handleResellerSelected = () => { // _resellerId removed as unused
   // This is handled by the watcher now.
   // console.log('Reseller selected:', resellerId);
 };

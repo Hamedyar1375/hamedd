@@ -51,7 +51,7 @@ import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useResellerAuthStore } from '@/store/resellerAuth'; // Use Reseller Store
 import { ElMessage, ElMessageBox } from 'element-plus';
-import { ArrowDown, HomeFilled, User, Setting, WalletFilled } from '@element-plus/icons-vue'; // Import WalletFilled
+import { ArrowDown, HomeFilled, User, Setting } from '@element-plus/icons-vue'; // Removed unused WalletFilled
 
 const route = useRoute();
 const router = useRouter();

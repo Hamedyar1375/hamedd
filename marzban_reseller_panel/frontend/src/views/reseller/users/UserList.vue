@@ -152,12 +152,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, reactive, computed, defineAsyncComponent } from 'vue';
+import { ref, onMounted, reactive, defineAsyncComponent } from 'vue'; // Removed unused computed
 import { useResellerUsersStore } from '@/store/resellerUsers';
 import { useResellerAuthStore } from '@/store/resellerAuth'; // To get accessible panels
 import { useAdminPricingPlansStore } from '@/store/adminPricingPlans'; // To get global plans
 import { useAdminResellerPricingsStore } from '@/store/adminResellerPricings'; // To get reseller specific pricing
-import { ElMessage, ElMessageBox } from 'element-plus';
+import { ElMessage } from 'element-plus'; // Removed ElMessageBox as unused
 import { Plus, Edit, Delete, DataLine } from '@element-plus/icons-vue';
 // import QrcodeVue from 'qrcode.vue'; // Uncomment if installed
 

@@ -1,41 +1,59 @@
-from pydantic import BaseModel, condecimal
-from typing import Optional, Text, Any
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, TIMESTAMP, func, DECIMAL, TEXT, ForeignKey, Enum as SQLAlchemyEnum
+from sqlalchemy.orm import relationship
+from app.db.base import Base # Assuming Base is in app.db.base
+from enum import Enum as PyEnum # For defining Python enums to be used with SQLAlchemy Enum
 
-# Assuming other Read schemas are available
-from app.schemas.reseller import ResellerRead # Or a simpler ResellerInTransactionRead
-from app.schemas.pricing_plan import PricingPlanRead
-# For ResellerPricingRead, need to import it from its schema file
-# from app.schemas.reseller_pricing import ResellerPricingRead # Assuming this path
-# For PaymentReceiptRead:
-from app.schemas.payment_receipt import PaymentReceiptRead
+# Define Python Enum for Transaction Types
+class TransactionTypeEnum(PyEnum):
+    wallet_top_up = "wallet_top_up"
+    usage_charge = "usage_charge" # For when a user's usage is billed
+    refund = "refund"
+    manual_credit = "manual_credit" # Admin manually adds funds
+    manual_debit = "manual_debit"   # Admin manually removes funds
+    initial_balance = "initial_balance" # When a reseller is created with an initial balance
+    service_fee = "service_fee" # Periodic service fees for the reseller account itself
+    # Add other types as needed
 
+class Transaction(Base):
+    __tablename__ = "transactions"
 
-from app.schemas.marzban_user import MarzbanUserRead # For nesting
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    reseller_id = Column(Integer, ForeignKey("resellers.id", ondelete="CASCADE"), nullable=False, index=True)
 
-class TransactionBase(BaseModel):
-    reseller_id: int
-    transaction_type: str
-    amount: condecimal(decimal_places=2)
-    marzban_user_id: Optional[int] = None # Changed from marzban_user_username
-    pricing_plan_id: Optional[int] = None
-    reseller_pricing_id: Optional[int] = None
-    description: Optional[Text] = None
-    payment_receipt_id: Optional[int] = None # Link to the PaymentReceipt if it's a top-up
+    # Use the Enum with SQLAlchemy
+    transaction_type = Column(SQLAlchemyEnum(TransactionTypeEnum, name="transaction_type_enum"), nullable=False, index=True)
 
-class TransactionCreate(TransactionBase):
-    pass
+    amount = Column(DECIMAL(10, 2), nullable=False) # Absolute value; type indicates debit/credit nature
 
-class TransactionRead(TransactionBase):
-    id: int
-    created_at: datetime
+    description = Column(TEXT, nullable=True)
+    created_at = Column(TIMESTAMP, server_default=func.now(), nullable=False, index=True)
+
+    # Optional foreign keys for more context about the transaction
+    marzban_user_id = Column(Integer, ForeignKey("marzban_users.id", ondelete="SET NULL"), nullable=True, index=True)
+    pricing_plan_id = Column(Integer, ForeignKey("pricing_plans.id", ondelete="SET NULL"), nullable=True)
+    # reseller_pricing_id links to the specific pricing agreement if applicable
+    reseller_pricing_id = Column(Integer, ForeignKey("reseller_pricings.id", ondelete="SET NULL"), nullable=True)
+    payment_receipt_id = Column(Integer, ForeignKey("payment_receipts.id", ondelete="SET NULL"), nullable=True, index=True)
+
+    # Relationships
+    reseller = relationship("Reseller", back_populates="transactions")
+
+    # Assuming MarzbanUser model will have a 'transactions' back_populates
+    marzban_user = relationship("MarzbanUser", back_populates="transactions")
     
-    reseller: ResellerRead # Or a simpler version like ResellerBasicInfo
-    pricing_plan: Optional[PricingPlanRead] = None
-    # reseller_pricing: Optional[ResellerPricingRead] = None # If full object needed
+    pricing_plan = relationship("PricingPlan") # This implies a one-way link or back_populates is elsewhere
+    reseller_pricing = relationship("ResellerPricing") # Similar
     
-    payment_receipt: Optional[PaymentReceiptRead] = None
-    marzban_user: Optional[MarzbanUserRead] = None # Added nested MarzbanUser
+    # This defines the 'payment_receipt' attribute on the Transaction model
+    payment_receipt = relationship("PaymentReceipt", back_populates="transaction")
 
-    class Config:
-        orm_mode = True
+    # Stores the reseller's wallet balance *after* this transaction was applied. Useful for auditing.
+    balance_after_transaction = Column(DECIMAL(10, 2), nullable=True)
+
+# Ensure related models have their back_populates correctly defined:
+# In Reseller (models/reseller.py):
+#   transactions = relationship("Transaction", back_populates="reseller", order_by="Transaction.created_at.desc()")
+# In MarzbanUser (models/marzban_user.py):
+#   transactions = relationship("Transaction", back_populates="marzban_user")
+# In PaymentReceipt (models/payment_receipt.py):
+#   transaction = relationship("Transaction", back_populates="payment_receipt", uselist=False)

@@ -1,5 +1,5 @@
 import apiClient from './api'; // Our pre-configured Axios instance
-import { useRouter } from 'vue-router'; // Only if needed for programmatic navigation outside components
+// import { useRouter } from 'vue-router'; // Removed as unused
 
 const login = async (username, password) => {
   const response = await apiClient.post('/auth/token', {

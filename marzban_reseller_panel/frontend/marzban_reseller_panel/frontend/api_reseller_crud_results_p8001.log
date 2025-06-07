@@ -1,0 +1,12 @@
+Starting Backend server on port 8001...
+Backend PID: 22231. Waiting 15s...
+Error: Backend server failed to start or complete startup on port 8001.
+INFO:     Started server process [22231]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8001): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+Generated new MARZBAN_PANEL_FERNET_KEY: rgwWNUwgkrZZxiutvEDjKOFtlvo2QbfzoifIJWrVZtA=
+IMPORTANT: Store this key securely, e.g., in your .env file for persistence.
+Admin user 'admin' already exists.

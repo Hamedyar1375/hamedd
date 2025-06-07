@@ -7,6 +7,7 @@ from app.db.models.payment_receipt import PaymentReceipt
 from app.db.models.reseller import Reseller
 from app.db.models.transaction import Transaction # Needed for type hinting if returned by a method
 from app.schemas.transaction import TransactionCreate
+from app.schemas.payment_receipt import PaymentReceiptCreate # Added this import
 from app.services.transaction_service import create_transaction # To log the transaction
 
 class PaymentReceiptServiceError(Exception):
@@ -129,6 +130,9 @@ def reject_receipt(
         db.commit()
         db.refresh(db_receipt)
         return db_receipt
+    except Exception as e:
+        db.rollback()
+        raise PaymentReceiptServiceError(f"Error rejecting receipt: {str(e)}")
 
 # --- Reseller-facing functions ---
 
@@ -138,18 +142,21 @@ def create_receipt_for_reseller(
     """
     Creates a new payment receipt for a given reseller with 'pending' status.
     """
-    # Ensure the reseller_id from the token overrides any in payload
-    db_receipt = PaymentReceipt(
-        reseller_id=reseller_id,
-        amount=receipt_in.amount,
-        receipt_reference=receipt_in.receipt_reference,
-        status='pending' # Initial status
-        # submitted_at is handled by server_default in model
-    )
-    db.add(db_receipt)
-    db.commit()
-    db.refresh(db_receipt)
-    return db_receipt
+    try:
+        # Ensure the reseller_id from the token overrides any in payload
+        db_receipt = PaymentReceipt(
+            reseller_id=reseller_id,
+            amount=receipt_in.amount,
+            transaction_id=receipt_in.transaction_id,
+            payment_method=receipt_in.payment_method,
+            notes=receipt_in.notes,
+            status='pending', # Initial status
+            # submitted_at is handled by server_default in model
+        )
+        db.add(db_receipt)
+        db.commit()
+        db.refresh(db_receipt)
+        return db_receipt
     except Exception as e:
         db.rollback()
-        raise PaymentReceiptServiceError(f"Error rejecting receipt: {str(e)}")
+        raise PaymentReceiptServiceError(f"Error creating receipt: {str(e)}")

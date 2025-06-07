@@ -222,7 +222,7 @@ const rules = reactive({
   ],
 });
 
-const handlePlanSelection = (planId) => {
+const handlePlanSelection = () => { // _planId removed as unused
     // Watcher for selectedPlanDetails handles updating form fields
     // This function can be used for additional logic if needed when a plan is selected
 };
