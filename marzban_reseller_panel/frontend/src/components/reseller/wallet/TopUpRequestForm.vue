@@ -42,11 +42,12 @@
 </template>
 
 <script setup>
-import { ref, reactive, defineProps, defineEmits, computed } from 'vue';
+import { ref, reactive, defineProps, defineEmits } from 'vue'; // Removed unused computed
 import { ElMessage } from 'element-plus';
 import { useResellerWalletStore } from '@/store/resellerWallet';
 
 
+/* eslint-disable-next-line no-unused-vars */
 const props = defineProps({
   loading: { // Prop to control loading state from parent
     type: Boolean,

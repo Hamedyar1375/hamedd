@@ -35,3 +35,7 @@ class ResellerRead(ResellerBase):
 
 class ResellerPanelAccessRequest(BaseModel):
     marzban_panel_ids: List[int]
+
+class ResellerPasswordUpdate(BaseModel):
+    current_password: str
+    new_password: str

@@ -18,6 +18,7 @@ import {
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale);
 
+/* eslint-disable-next-line no-unused-vars */
 const props = defineProps({
   chartData: {
     type: Object,

@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Dict, Any
 
 # Project imports
 from app.db.session import get_db
 from app.db.models.reseller import Reseller as ResellerModel
 from app.db.models.marzban_user import MarzbanUser as MarzbanUserModel
-from app.schemas.marzban_user import MarzbanUserRead, ResellerMarzbanUserCreateRequest # Added request schema
+from app.schemas.marzban_user import MarzbanUserRead, ResellerMarzbanUserCreateRequest, ResellerMarzbanUserUpdateRequest # Added request schema
 from app.services import marzban_user_service
 from app.api.v1.endpoints.reseller_auth import get_current_active_reseller
 

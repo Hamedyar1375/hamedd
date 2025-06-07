@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, watch, defineProps, defineEmits } from 'vue';
+import { ref, reactive, watch, defineProps, defineEmits, computed } from 'vue';
 import { ElMessage } from 'element-plus';
 import { useAdminMarzbanPanelsStore } from '@/store/adminMarzbanPanels'; // For loading state
 

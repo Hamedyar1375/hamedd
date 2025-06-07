@@ -1,0 +1,9 @@
+INFO:     Started server process [20792]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+Generated new MARZBAN_PANEL_FERNET_KEY: tyJcqBFbTA1rbng7tdqnqbPlLDD0kfM4ntGBEBm3t9A=
+IMPORTANT: Store this key securely, e.g., in your .env file for persistence.
+Admin user 'admin' already exists.

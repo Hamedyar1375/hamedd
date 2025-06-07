@@ -1,0 +1,33 @@
+Attempting to free port 8000 before starting servers...
+Port 8000 seems free or fuser not available (pre-test).
+Starting Backend server...
+Backend PID: 21053. Waiting 10s...
+Backend server started.
+Starting Frontend server...
+Frontend PID: 21059. Waiting 90s...
+Frontend server started.
+Logging in as admin...
+Admin token obtained.
+Listing Marzban panels (expecting empty list)...
+Response Status (List1): 200
+Response Body (List1): []
+Initial list panels successful and empty as expected.
+Creating new panel: Test Marzban Panel Retry with payload:
+{
+  "name": "Test Marzban Panel Retry",
+  "api_url": "http://testmarzban-retry.example.com:7879",
+  "admin_username": "marz_admin_retry",
+  "admin_password": "marz_pass_retry"
+}
+Response Status (Create): 500
+Response Body (Create): Internal Server Error
+Error: Create panel failed.
+INFO:     Started server process [21053]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+Generated new MARZBAN_PANEL_FERNET_KEY: ouMY0XQYL4KegnKplaT5Wgmu4sQBnaglso9p9lH41To=
+IMPORTANT: Store this key securely, e.g., in your .env file for persistence.
+Admin user 'admin' already exists.

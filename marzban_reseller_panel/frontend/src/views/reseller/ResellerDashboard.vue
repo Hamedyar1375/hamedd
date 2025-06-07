@@ -92,17 +92,17 @@ const walletStore = useResellerWalletStore(); // Initialize wallet store
 const usersStore = useResellerUsersStore(); // Initialize users store
 
 // KPI data
-const walletBalanceDisplay = computed(() => {
-    if (walletStore.isLoadingBalance) return 'Loading...';
-    if (walletStore.getBalanceError) return 'Error';
-    if (walletStore.getBalance) {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: walletStore.getBalance.currency || 'USD'
-        }).format(walletStore.getBalance.balance);
-    }
-    return 'N/A';
-});
+// const walletBalanceDisplay = computed(() => { // Removed as unused
+//     if (walletStore.isLoadingBalance) return 'Loading...';
+//     if (walletStore.getBalanceError) return 'Error';
+//     if (walletStore.getBalance) {
+//         return new Intl.NumberFormat('en-US', {
+//             style: 'currency',
+//             currency: walletStore.getBalance.currency || 'USD'
+//         }).format(walletStore.getBalance.balance);
+//     }
+//     return 'N/A';
+// });
 const activeUsersDisplay = computed(() => {
     if (usersStore.loadingUsers && usersStore.getUsers.length === 0 && usersStore.getPagination.totalItems === 0) return 'Loading...';
     if (usersStore.getPagination && usersStore.getPagination.totalItems !== undefined) {
@@ -147,7 +147,7 @@ watch(() => authStore.getResellerUser, (newUser) => {
 }, { immediate: false }); // immediate might be true if fetchKpiData doesn't rely on async checkAuth completion
 
 // Watch for wallet balance changes from the store
-watch(() => walletStore.getBalance, (newBalance) => {
+watch(() => walletStore.getBalance, () => { // _newBalance removed as unused
     // walletBalanceDisplay computed property will update automatically
     // No specific action needed here unless there's other logic.
 }, { deep: true });

@@ -53,6 +53,7 @@ def read_reseller_pricing_configs(
             marzban_panel_id=marzban_panel_id if marzban_panel_id is not None else -1 # Re-evaluate this -1
         )
     else:
+        pass
         # Basic get all if no reseller_id, service might need a get_all_pricings function
         # For now, this will be empty if reseller_id is None.
         # A proper get_all_pricings or more advanced filtering in service would be better.

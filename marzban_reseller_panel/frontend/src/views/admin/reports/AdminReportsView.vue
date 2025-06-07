@@ -49,9 +49,9 @@
 </template>
 
 <script setup>
-import { ref, computed, defineAsyncComponent, watch } from 'vue';
+import { ref, computed, defineAsyncComponent } from 'vue'; // Removed unused watch
 import { useAdminReportsStore } from '@/store/adminReports';
-import { ElMessage } from 'element-plus';
+// import { ElMessage } from 'element-plus'; // Removed as unused
 
 // Reusable controls component (could be in a separate file)
 const ReportControls = {
@@ -102,7 +102,7 @@ const fetchCurrentReport = async (periodData) => {
   // Add other report types here
 };
 
-const handleReportTabClick = (tab) => {
+const handleReportTabClick = () => { // _tab removed as unused
   // activeReportTab is updated by v-model.
   // Clear previous report data or let ReportControls trigger new fetch.
   // For now, we assume ReportControls will be used to fetch for the new tab.

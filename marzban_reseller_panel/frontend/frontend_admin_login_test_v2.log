@@ -1,0 +1,361 @@
+
+> frontend@0.1.0 serve
+> vue-cli-service serve
+
+ INFO  Starting development server...
+[3%] setup (watch run)
+[2K[1A[2K[G[3%] setup (watch run vue-loader-plugin)
+[2K[1A[2K[G[3%] setup (watch run ESLintWebpackPlugin_1)
+[2K[1A[2K[G[3%] setup (watch run webpack-dev-middleware)
+[2K[1A[2K[G[3%] setup (watch run)
+[2K[1A[2K[G[4%] setup (normal module factory)
+[2K[1A[2K[G[4%] setup (normal module factory CaseSensitivePathsPlugin)
+[2K[1A[2K[G[4%] setup (normal module factory)
+[2K[1A[2K[G[5%] setup (context module factory)
+[2K[1A[2K[G[6%] setup (before compile)
+[2K[1A[2K[G[6%] setup (before compile ProgressPlugin)
+[2K[1A[2K[G[6%] setup (before compile)
+[2K[1A[2K[G[7%] setup (compile)
+[2K[1A[2K[G[7%] setup (compile ExternalsPlugin)
+[2K[1A[2K[G[7%] setup (compile)
+[2K[1A[2K[G[8%] setup (compilation)
+[2K[1A[2K[G[8%] setup (compilation HtmlWebpackPlugin)
+[2K[1A[2K[G[8%] setup (compilation CopyPlugin)
+[2K[1A[2K[G[8%] setup (compilation ArrayPushCallbackChunkFormatPlugin)
+[2K[1A[2K[G[8%] setup (compilation JsonpChunkLoadingPlugin)
+[2K[1A[2K[G[8%] setup (compilation StartupChunkDependenciesPlugin)
+[2K[1A[2K[G[8%] setup (compilation ImportScriptsChunkLoadingPlugin)
+[2K[1A[2K[G[8%] setup (compilation WorkerPlugin)
+[2K[1A[2K[G[8%] setup (compilation SplitChunksPlugin)
+[2K[1A[2K[G[8%] setup (compilation ResolverCachePlugin)
+[2K[1A[2K[G[8%] setup (compilation)
+[2K[1A[2K[G[9%] setup (compilation)
+[2K[1A[2K[G[9%] setup (compilation vue-loader-plugin)
+[2K[1A[2K[G[9%] setup (compilation DefinePlugin)
+[2K[1A[2K[G[9%] setup (compilation ProgressPlugin)
+[2K[1A[2K[G[9%] setup (compilation EntryPlugin)
+[2K[1A[2K[G[9%] setup (compilation ChunkPrefetchPreloadPlugin)
+[2K[1A[2K[G[9%] setup (compilation ModuleInfoHeaderPlugin)
+[2K[1A[2K[G[9%] setup (compilation EvalSourceMapDevToolPlugin)
+[2K[1A[2K[G[9%] setup (compilation JavascriptModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation JsonModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation AssetModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation EntryPlugin)
+[2K[1A[2K[G[9%] setup (compilation RuntimePlugin)
+[2K[1A[2K[G[9%] setup (compilation InferAsyncModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation DataUriPlugin)
+[2K[1A[2K[G[9%] setup (compilation FileUriPlugin)
+[2K[1A[2K[G[9%] setup (compilation CompatibilityPlugin)
+[2K[1A[2K[G[9%] setup (compilation HarmonyModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation AMDPlugin)
+[2K[1A[2K[G[9%] setup (compilation RequireJsStuffPlugin)
+[2K[1A[2K[G[9%] setup (compilation CommonJsPlugin)
+[2K[1A[2K[G[9%] setup (compilation LoaderPlugin)
+[2K[1A[2K[G[9%] setup (compilation NodeStuffPlugin)
+[2K[1A[2K[G[9%] setup (compilation APIPlugin)
+[2K[1A[2K[G[9%] setup (compilation ExportsInfoApiPlugin)
+[2K[1A[2K[G[9%] setup (compilation WebpackIsIncludedPlugin)
+[2K[1A[2K[G[9%] setup (compilation ConstPlugin)
+[2K[1A[2K[G[9%] setup (compilation UseStrictPlugin)
+[2K[1A[2K[G[9%] setup (compilation RequireIncludePlugin)
+[2K[1A[2K[G[9%] setup (compilation RequireEnsurePlugin)
+[2K[1A[2K[G[9%] setup (compilation RequireContextPlugin)
+[2K[1A[2K[G[9%] setup (compilation ImportPlugin)
+[2K[1A[2K[G[9%] setup (compilation ImportMetaContextPlugin)
+[2K[1A[2K[G[9%] setup (compilation SystemPlugin)
+[2K[1A[2K[G[9%] setup (compilation ImportMetaPlugin)
+[2K[1A[2K[G[9%] setup (compilation URLPlugin)
+[2K[1A[2K[G[9%] setup (compilation DefaultStatsFactoryPlugin)
+[2K[1A[2K[G[9%] setup (compilation DefaultStatsPresetPlugin)
+[2K[1A[2K[G[9%] setup (compilation DefaultStatsPrinterPlugin)
+[2K[1A[2K[G[9%] setup (compilation JavascriptMetaInfoPlugin)
+[2K[1A[2K[G[9%] setup (compilation EnsureChunkConditionsPlugin)
+[2K[1A[2K[G[9%] setup (compilation RemoveEmptyChunksPlugin)
+[2K[1A[2K[G[9%] setup (compilation MergeDuplicateChunksPlugin)
+[2K[1A[2K[G[9%] setup (compilation SideEffectsFlagPlugin)
+[2K[1A[2K[G[9%] setup (compilation FlagDependencyExportsPlugin)
+[2K[1A[2K[G[9%] setup (compilation NamedModuleIdsPlugin)
+[2K[1A[2K[G[9%] setup (compilation NamedChunkIdsPlugin)
+[2K[1A[2K[G[9%] setup (compilation DefinePlugin)
+[2K[1A[2K[G[9%] setup (compilation TemplatedPathPlugin)
+[2K[1A[2K[G[9%] setup (compilation RecordIdsPlugin)
+[2K[1A[2K[G[9%] setup (compilation WarnCaseSensitiveModulesPlugin)
+[2K[1A[2K[G[9%] setup (compilation EntryPlugin)
+[2K[1A[2K[G[9%] setup (compilation ProvidePlugin)
+[2K[1A[2K[G[9%] setup (compilation HotModuleReplacementPlugin)
+[2K[1A[2K[G[9%] setup (compilation ProgressPlugin)
+[2K[1A[2K[G[9%] setup (compilation ESLintWebpackPlugin_1)
+[2K[1A[2K[G[9%] setup (compilation)
+[2K[1A[2K[G[10%] building
+[2K[1A[2K[G[10%] building (0/0 modules)
+[2K[1A[2K[G[10%] building (import loader babel-loader/lib/index.js)
+[2K[1A[2K[G[10%] building (0/1 modules)
+[2K[1A[2K[G[24%] building (1/7 modules)
+[2K[1A[2K[G[24%] building (import loader vue-loader/dist/index.js)
+[2K[1A[2K[G[24%] building (3/16 modules)
+[2K[1A[2K[G[24%] building (import loader vue-loader/dist/pitcher.js)
+[2K[1A[2K[G[24%] building (7/32 modules)
+[2K[1A[2K[G[24%] building (import loader vue-loader/dist/templateLoader.js)
+[2K[1A[2K[G[24%] building (7/32 modules)
+[2K[1A[2K[G[24%] building (import loader vue-style-loader/index.js)
+[2K[1A[2K[G[24%] building (import loader css-loader/dist/cjs.js)
+[2K[1A[2K[G[24%] building (import loader postcss-loader/dist/cjs.js)
+[2K[1A[2K[G[24%] building (7/37 modules)
+[2K[1A[2K[G[24%] building (import loader vue-loader/dist/stylePostLoader.js)
+[2K[1A[2K[G[24%] building (10/40 modules)
+[2K[1A[2K[G[24%] building (17/200 modules)
+[2K[1A[2K[G[24%] building (30/444 modules)
+[2K[1A[2K[G[38%] building (46/486 modules)
+[2K[1A[2K[G[38%] building (63/575 modules)
+[2K[1A[2K[G[38%] building (76/679 modules)
+[2K[1A[2K[G[38%] building (109/729 modules)
+[2K[1A[2K[G[38%] building (127/795 modules)
+[2K[1A[2K[G[38%] building (200/822 modules)
+[2K[1A[2K[G[38%] building (215/900 modules)
+[2K[1A[2K[G[38%] building (298/933 modules)
+[2K[1A[2K[G[38%] building (391/979 modules)
+[2K[1A[2K[G[38%] building (449/1005 modules)
+[2K[1A[2K[G[38%] building (519/1364 modules)
+[2K[1A[2K[G[38%] building (599/1388 modules)
+[2K[1A[2K[G[38%] building (647/1490 modules)
+[2K[1A[2K[G[38%] building (666/1555 modules)
+[2K[1A[2K[G[38%] building (735/1632 modules)
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[1m[33m[@vue/compiler-sfc][0m[33m `defineEmits` is a compiler macro and no longer needs to be imported.[0m
+
+[2K[1A[2K[G[38%] building (856/1702 modules)
+[2K[1A[2K[G[38%] building (1024/1748 modules)
+[2K[1A[2K[G[51%] building (1225/1781 modules)
+[2K[1A[2K[G[51%] building (1499/1817 modules)
+[2K[1A[2K[G[65%] building (1866/1866 modules)
+[2K[1A[2K[G[65%] building
+[2K[1A[2K[G[69%] building (finish)
+[2K[1A[2K[G[70%] sealing (finish module graph)
+[2K[1A[2K[G[70%] sealing (finish module graph ResolverCachePlugin)
+[2K[1A[2K[G[70%] sealing (finish module graph InferAsyncModulesPlugin)
+[2K[1A[2K[G[70%] sealing (finish module graph FlagDependencyExportsPlugin)
+[2K[1A[2K[G[70%] sealing (finish module graph ESLintWebpackPlugin_1)
+[2K[1A[2K[G[70%] sealing (finish module graph)
+[2K[1A[2K[G[71%] sealing (plugins)
+[2K[1A[2K[G[71%] sealing (plugins WarnCaseSensitiveModulesPlugin)
+[2K[1A[2K[G[71%] sealing (plugins)
+[2K[1A[2K[G[71%] sealing (dependencies optimization)
+[2K[1A[2K[G[71%] sealing (dependencies optimization SideEffectsFlagPlugin)
+[2K[1A[2K[G[71%] sealing (dependencies optimization)
+[2K[1A[2K[G[72%] sealing (after dependencies optimization)
+[2K[1A[2K[G[73%] sealing (chunk graph)
+[2K[1A[2K[G[73%] sealing (after chunk graph)
+[2K[1A[2K[G[74%] sealing (optimizing)
+[2K[1A[2K[G[74%] sealing (module optimization)
+[2K[1A[2K[G[75%] sealing (after module optimization)
+[2K[1A[2K[G[76%] sealing (chunk optimization)
+[2K[1A[2K[G[76%] sealing (chunk optimization EnsureChunkConditionsPlugin)
+[2K[1A[2K[G[76%] sealing (chunk optimization RemoveEmptyChunksPlugin)
+[2K[1A[2K[G[76%] sealing (chunk optimization MergeDuplicateChunksPlugin)
+[2K[1A[2K[G[76%] sealing (chunk optimization SplitChunksPlugin)
+[2K[1A[2K[G[76%] sealing (chunk optimization RemoveEmptyChunksPlugin)
+[2K[1A[2K[G[76%] sealing (chunk optimization)
+[2K[1A[2K[G[76%] sealing (after chunk optimization)
+[2K[1A[2K[G[77%] sealing (module and chunk tree optimization)
+[2K[1A[2K[G[77%] sealing (module and chunk tree optimization PersistentChildCompilerSinglet
+onPlugin)
+[2K[1A[2K[1A[2K[G[77%] sealing (module and chunk tree optimization)
+[2K[1A[2K[G[78%] sealing (after module and chunk tree optimization)
+[2K[1A[2K[G[78%] sealing (chunk modules optimization)
+[2K[1A[2K[G[79%] sealing (after chunk modules optimization)
+[2K[1A[2K[G[80%] sealing (module reviving)
+[2K[1A[2K[G[80%] sealing (module reviving RecordIdsPlugin)
+[2K[1A[2K[G[80%] sealing (module reviving)
+[2K[1A[2K[G[80%] sealing (before module ids)
+[2K[1A[2K[G[81%] sealing (module ids)
+[2K[1A[2K[G[81%] sealing (module ids NamedModuleIdsPlugin)
+[2K[1A[2K[G[81%] sealing (module ids)
+[2K[1A[2K[G[82%] sealing (module id optimization)
+[2K[1A[2K[G[82%] sealing (module id optimization)
+[2K[1A[2K[G[83%] sealing (chunk reviving)
+[2K[1A[2K[G[83%] sealing (chunk reviving RecordIdsPlugin)
+[2K[1A[2K[G[83%] sealing (chunk reviving)
+[2K[1A[2K[G[83%] sealing (before chunk ids)
+[2K[1A[2K[G[84%] sealing (chunk ids)
+[2K[1A[2K[G[84%] sealing (chunk ids NamedChunkIdsPlugin)
+[2K[1A[2K[G[84%] sealing (chunk ids)
+[2K[1A[2K[G[85%] sealing (chunk id optimization)
+[2K[1A[2K[G[85%] sealing (after chunk id optimization)
+[2K[1A[2K[G[86%] sealing (record modules)
+[2K[1A[2K[G[86%] sealing (record modules RecordIdsPlugin)
+[2K[1A[2K[G[86%] sealing (record modules)
+[2K[1A[2K[G[87%] sealing (record chunks)
+[2K[1A[2K[G[87%] sealing (record chunks RecordIdsPlugin)
+[2K[1A[2K[G[87%] sealing (record chunks)
+[2K[1A[2K[G[87%] sealing (module hashing)
+[2K[1A[2K[G[88%] sealing (code generation)
+[2K[1A[2K[G[89%] sealing (runtime requirements)
+[2K[1A[2K[G[89%] sealing (hashing)
+[2K[1A[2K[G[90%] sealing (after hashing)
+[2K[1A[2K[G[91%] sealing (record hash)
+[2K[1A[2K[G[91%] sealing (module assets processing)
+[2K[1A[2K[G[92%] sealing (chunk assets processing)
+[2K[1A[2K[G[92%] sealing (asset processing)
+[2K[1A[2K[G[92%] sealing (asset processing copy-webpack-plugin)
+[2K[1A[2K[G[92%] sealing (asset processing HotModuleReplacementPlugin)
+[2K[1A[2K[G[92%] sealing (asset processing ESLintWebpackPlugin_1)
+[2K[1A[2K[G[92%] sealing (asset processing PersistentChildCompilerSingletonPlugin)
+[2K[1A[2K[G[92%] sealing (asset processing HtmlWebpackPlugin)
+[2K[1A[2K[G[92%] sealing (asset processing)
+[2K[1A[2K[G[93%] sealing (after asset optimization)
+[2K[1A[2K[G[94%] sealing (recording)
+[2K[1A[2K[G[94%] sealing (recording HotModuleReplacementPlugin)
+[2K[1A[2K[G[94%] sealing (recording)
+[2K[1A[2K[G[94%] sealing (after seal)
+[2K[1A[2K[G[95%] emitting (emit)
+[2K[1A[2K[G[98%] emitting (after emit)
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[G ERROR  Failed to compile with 1 error6:19:11 PM
+
+[eslint]
+/app/marzban_reseller_panel/frontend/src/components/admin/marzban_panels/MarzbanPanelForm.vue
+  55:19  error  'computed' is not defined  no-undef
+
+/app/marzban_reseller_panel/frontend/src/components/admin/resellers/ResellerPanelAccessDialog.vue
+   55:32  error  'onMounted' is defined but never used  no-unused-vars
+  102:14  error  'err' is defined but never used        no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/charts/BarChart.vue
+  20:7  error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/charts/LineChart.vue
+  21:7  error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/reseller/users/UserForm.vue
+  225:30  error  'planId' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/reseller/wallet/TopUpRequestForm.vue
+  45:51  error  'computed' is defined but never used        no-unused-vars
+  50:7   error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/layouts/AdminLayout.vue
+  54:48   error  'Platform' is defined but never used         no-unused-vars
+  54:58   error  'Avatar' is defined but never used           no-unused-vars
+  54:66   error  'PriceTag' is defined but never used         no-unused-vars
+  54:76   error  'Money' is defined but never used            no-unused-vars
+  54:83   error  'DocumentChecked' is defined but never used  no-unused-vars
+  54:100  error  'DataLine' is defined but never used         no-unused-vars
+  54:110  error  'Refresh' is defined but never used          no-unused-vars
+  57:7    error  'router' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/layouts/ResellerLayout.vue
+  54:48  error  'WalletFilled' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/AdminDashboard.vue
+  113:7  error  'paymentReceiptsStore' is assigned a value but never used  no-unused-vars
+  154:1  error  'watch' is not defined                                     no-undef
+
+/app/marzban_reseller_panel/frontend/src/views/admin/marzban_panels/MarzbanPanelList.vue
+  64:26  error  'computed' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/payment_receipts/PaymentReceiptList.vue
+  126:25  error  'tab' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/reports/AdminReportsView.vue
+   52:47  error  'watch' is defined but never used      no-unused-vars
+   54:10  error  'ElMessage' is defined but never used  no-unused-vars
+  105:31  error  'tab' is defined but never used        no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/reseller_pricings/ResellerPricingManagement.vue
+  155:33  error  'resellerId' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/sync/AdminSyncView.vue
+  102:26  error  'computed' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/reseller/ResellerDashboard.vue
+   95:7   error  'walletBalanceDisplay' is assigned a value but never used  no-unused-vars
+  150:38  error  'newBalance' is defined but never used                     no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/reseller/users/UserList.vue
+  155:36  error  'computed' is defined but never used      no-unused-vars
+  160:21  error  'ElMessageBox' is defined but never used  no-unused-vars
+
+✖ 30 problems (30 errors, 0 warnings)
+
+
+You may use special comments to disable some warnings.
+Use // eslint-disable-next-line to ignore the next line.
+Use /* eslint-disable */ to ignore all warnings in a file.
+Build finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GBuild finished at 18:19:11 by 0.000s
+[2K[1A[2K[GERROR in [eslint]
+/app/marzban_reseller_panel/frontend/src/components/admin/marzban_panels/MarzbanPanelForm.vue
+  55:19  error  'computed' is not defined  no-undef
+
+/app/marzban_reseller_panel/frontend/src/components/admin/resellers/ResellerPanelAccessDialog.vue
+   55:32  error  'onMounted' is defined but never used  no-unused-vars
+  102:14  error  'err' is defined but never used        no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/charts/BarChart.vue
+  20:7  error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/charts/LineChart.vue
+  21:7  error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/reseller/users/UserForm.vue
+  225:30  error  'planId' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/components/reseller/wallet/TopUpRequestForm.vue
+  45:51  error  'computed' is defined but never used        no-unused-vars
+  50:7   error  'props' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/layouts/AdminLayout.vue
+  54:48   error  'Platform' is defined but never used         no-unused-vars
+  54:58   error  'Avatar' is defined but never used           no-unused-vars
+  54:66   error  'PriceTag' is defined but never used         no-unused-vars
+  54:76   error  'Money' is defined but never used            no-unused-vars
+  54:83   error  'DocumentChecked' is defined but never used  no-unused-vars
+  54:100  error  'DataLine' is defined but never used         no-unused-vars
+  54:110  error  'Refresh' is defined but never used          no-unused-vars
+  57:7    error  'router' is assigned a value but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/layouts/ResellerLayout.vue
+  54:48  error  'WalletFilled' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/AdminDashboard.vue
+  113:7  error  'paymentReceiptsStore' is assigned a value but never used  no-unused-vars
+  154:1  error  'watch' is not defined                                     no-undef
+
+/app/marzban_reseller_panel/frontend/src/views/admin/marzban_panels/MarzbanPanelList.vue
+  64:26  error  'computed' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/payment_receipts/PaymentReceiptList.vue
+  126:25  error  'tab' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/reports/AdminReportsView.vue
+   52:47  error  'watch' is defined but never used      no-unused-vars
+   54:10  error  'ElMessage' is defined but never used  no-unused-vars
+  105:31  error  'tab' is defined but never used        no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/reseller_pricings/ResellerPricingManagement.vue
+  155:33  error  'resellerId' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/admin/sync/AdminSyncView.vue
+  102:26  error  'computed' is defined but never used  no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/reseller/ResellerDashboard.vue
+   95:7   error  'walletBalanceDisplay' is assigned a value but never used  no-unused-vars
+  150:38  error  'newBalance' is defined but never used                     no-unused-vars
+
+/app/marzban_reseller_panel/frontend/src/views/reseller/users/UserList.vue
+  155:36  error  'computed' is defined but never used      no-unused-vars
+  160:21  error  'ElMessageBox' is defined but never used  no-unused-vars
+
+✖ 30 problems (30 errors, 0 warnings)
+
+webpack compiled with 1 error

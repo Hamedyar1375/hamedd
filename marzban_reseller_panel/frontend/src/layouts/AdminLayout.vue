@@ -48,13 +48,13 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router'; // Removed useRouter
 import { useAdminAuthStore } from '@/store/adminAuth';
 import { ElMessage, ElMessageBox } from 'element-plus';
-import { ArrowDown, HomeFilled, User, Setting, Platform, Avatar, PriceTag, Money, DocumentChecked, DataLine, Refresh } from '@element-plus/icons-vue'; // Import Refresh icon
+import { ArrowDown, HomeFilled, User, Setting } from '@element-plus/icons-vue'; // Removed unused icons
 
 const route = useRoute();
-const router = useRouter();
+// const router = useRouter(); // Removed as unused
 const authStore = useAdminAuthStore();
 
 const activeMenu = computed(() => route.path);

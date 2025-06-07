@@ -123,7 +123,7 @@ watch(activeTab, () => {
   fetchCurrentTabData();
 });
 
-const handleTabClick = (tab) => {
+const handleTabClick = () => { // _tab removed as unused
   // activeTab is already updated by v-model, watcher will trigger data fetch
 };
 
